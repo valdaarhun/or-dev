@@ -1,0 +1,13 @@
+#!/bin/busybox sh
+
+/bin/busybox --install -s
+
+mount -t proc proc /proc
+mount -t sysfs sys /sys
+mount -t tmpfs tmpfs /tmp
+
+# To enable job control
+setsid cttyhack sh
+
+sh
+
