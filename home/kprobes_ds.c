@@ -2,8 +2,10 @@
 #include <linux/init.h>
 #include <linux/kprobes.h>
 
+// WARNING: Addresses might be different after rebuilding the kernel!
+
 static struct kprobe kp = {
-    .addr = 0xc0147e9c, // Instruction in delay slot
+    .addr = 0xc014837c, // l.or preceded by l.jal
 };
 
 static int my_pre_handler(struct kprobe *p, struct pt_regs *regs) {

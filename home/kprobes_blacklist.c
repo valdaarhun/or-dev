@@ -17,7 +17,7 @@ static struct kprobe kp3 = {
 };
 
 static struct kprobe kp4 = {
-    .addr = 0xc00039ec, // l.lwa
+    .addr = 0xc00035f8, // l.lwa
 };
 
 static struct kprobe kp5 = {
@@ -25,15 +25,15 @@ static struct kprobe kp5 = {
 };
 
 static struct kprobe kp6 = {
-    .addr = 0xc0506338, // l.sys
+    .addr = 0xc04f1f94, // l.sys
 };
 
 static struct kprobe kp7 = {
-    .addr = 0xc04f2578, // l.csync
+    .addr = 0xc04f8578, // l.csync
 };
 
 static struct kprobe kp8 = {
-    .addr = 0xc008d2c8, // l.msync
+    .addr = 0xc050c4e0, // l.msync
 };
 
 static int __init init_fn(void) {

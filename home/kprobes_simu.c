@@ -2,12 +2,14 @@
 #include <linux/init.h>
 #include <linux/kprobes.h>
 
+// WARNING: Addresses might be different after rebuilding the kernel!
+
 static struct kprobe kp1 = {
-    .addr = 0xc01484e8, // l.jal
+    .addr = 0xc0148378, // l.jal
 };
 
 static struct kprobe kp2 = {
-    .addr = 0xc01484f4, // l.bf
+    .addr = 0xc0148384, // l.bf
 };
 
 static int my_pre_handler(struct kprobe *p, struct pt_regs *regs) {
