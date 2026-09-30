@@ -26,8 +26,14 @@ void process_data() {
 void work() {
     process_data();  // Delegate to process_data
 }
+
+int echo(int a) {
+  return a << 2;
+}
  
 int main() {
+    int a = 10;
+    echo(a);
     work();  // Start the workload
     printf("Done!\n");
     return 0;

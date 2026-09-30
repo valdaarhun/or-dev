@@ -11,10 +11,15 @@ static int my_pre_handler(struct kprobe *p, struct pt_regs *regs) {
     return 0;
 }
 
+static void my_post_handler(struct kprobe *p, struct pt_regs *regs, unsigned long flags) {
+    printk(KERN_INFO "Running posthandler for my_pre_handler_hello\n");
+}
+
 static int __init init_fn(void) {
     int ret;
 
     kp.pre_handler = my_pre_handler;
+    kp.post_handler = my_post_handler;
     ret = register_kprobe(&kp);
     if (ret < 0) {
         printk(KERN_INFO "Failed to register kprobe (%d)\n", ret);

@@ -5,35 +5,35 @@
 // WARNING: Addresses might be different after rebuilding the kernel!
 
 static struct kprobe kp1 = {
-    .addr = 0xc000028c, // l.mtspr
+    .addr = 0xc05e56c4, // l.mtspr
 };
 
 static struct kprobe kp2 = {
-    .addr = 0xc0000204, // l.mfspr
+    .addr = 0xc05e551c, // l.mfspr
 };
 
 static struct kprobe kp3 = {
-    .addr = 0xc0002190, // l.swa
+    .addr = 0xc05e54d0, // l.swa
 };
 
 static struct kprobe kp4 = {
-    .addr = 0xc00035f8, // l.lwa
+    .addr = 0xc05dd6cc, // l.lwa
 };
 
 static struct kprobe kp5 = {
-    .addr = 0xc000f0b8, // l.rfe
+    .addr = 0xc05dd494, // l.rfe
 };
 
 static struct kprobe kp6 = {
-    .addr = 0xc04f1f94, // l.sys
+    .addr = 0xc05b27ec, // l.sys
 };
 
 static struct kprobe kp7 = {
-    .addr = 0xc04f8578, // l.csync
+    .addr = 0xc05c68e0, // l.csync
 };
 
 static struct kprobe kp8 = {
-    .addr = 0xc050c4e0, // l.msync
+    .addr = 0xc05dd45c, // l.msync
 };
 
 static int __init init_fn(void) {
